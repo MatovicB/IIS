@@ -100,7 +100,7 @@ header {
 #main{
     height: 600px;
     /* background: url("/assets/img/homepage.jpg") no-repeat; */
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/img/homepage.jpg') no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('img/homepage.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
