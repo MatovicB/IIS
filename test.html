@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Change Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .text-container {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .changing-word {
+            color: #ff5733; /* Boja za animirani tekst */
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-container">
+        <h1>IIS Material Handling Inc.</h1>
+        Best in <span class="changing-word">business</span>
+    </div>
+
+    <script>
+        const words = ["business", "country", "world"];
+        let index = 0;
+        const changingText = document.querySelector(".changing-word");
+
+        function changeWord() {
+            index = (index + 1) % words.length; // Ide kroz niz i vraća na početak kada završi
+            changingText.style.opacity = 0; // Nestajanje teksta pre promene
+
+            setTimeout(() => {
+                changingText.textContent = words[index];
+                changingText.style.opacity = 1; // Vraćanje teksta sa animacijom
+            }, 500);
+        }
+
+        setInterval(changeWord, 3000); // Menjanje teksta na svake 3 sekunde
+    </script>
+
+</body>
+</html>
