@@ -5,250 +5,118 @@
     box-sizing: border-box;
 }
 
-/* Header osnovni stil */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: white;
-    color: black;
-    position: fixed;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    z-index: 5;
+nav{
+    background-color:#EC5800 !important;
 }
-
-/* Logo */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.nav-link{
+    color: #fff;
 }
-
-/* Hamburger ikonica */
-.menu-toggle {
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 101;
-}
-
-/* Navigacija */
-.nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 60%;
-    height: 100vh;
-    background: #EC5800;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 100;
-}
-
-.nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-links ul li {
-    padding: 15px 0;
-}
-
-.nav-links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-.nav-links ul li a:hover {
-    color: #000;
-}
-
-/* Aktivna klasa kada je meni otvoren */
-.nav-links.active {
-    right: 0;
-}
-
-/* Overlay kada je meni otvoren */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 99;
-}
-
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* START MAIN*/
-
-#main{
+/* HERO SEKCIJA */
+#main {
     height: 600px;
-    /* background: url("/assets/img/homepage.jpg") no-repeat; */
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('img/homepage.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.homepageTextDiv{
-    width: 100%;
-    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)), url('img/homepage.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    z-index: 4;
-    color: white;
-}
-.homepageTextDiv h1{
-    font-size: 28px;
-    margin-bottom: 5px;
 }
 .changing-word {
     color: #EC5800; /* Boja za animirani tekst */
     transition: opacity 0.5s ease-in-out;
 }
 
+.btnNovi{
+    background-color: #EC5800;
+}
+
 /* CSS */
-.button-87 {
-  margin: 10px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-87:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-.button-87:active {
-  transform: scale(0.95);
-}
-
-/* START WE GROWN SECTION */
-
-.our-story {
+.btnNovi {
+    margin: 0px auto;
+    padding: 10px 30px;
     text-align: center;
-    padding: 20px;
-    background: white;
-    color: #EC5800;
-}
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #EC5800 0%, #F09819  51%, #EC5800  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btnNovi:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btnNovi:active {
+    transform: scale(0.95);
+  }
 
+
+
+/* Sekcija "We grow together" */
 .our-story h2 {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 30px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+
+
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.our-story h2::before,
 .our-story h2::after {
     content: "";
-    height: 3px;
-    background: #EC5800;
-    flex-grow: 1; /* Omogućava da se linije prilagode */
-    max-width: 50px; /* Sprečava predugačke linije */
+    display: block;
+    width: 80%;
+    height: 5px;
+    background: linear-gradient(to right, #EC5800, #F09819);
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    border-radius: 5px;
 }
 
-.our-story h2::before {
-    left: -60px;
+.our-story h2.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
-.our-story h2::after {
-    right: -60px;
-}
+/* */
+ 
 
-.stats-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    max-width: 300px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.stat {
-    text-align: center;
+.counter {
     font-size: 30px;
     font-weight: bold;
+    color: #EC5800;
 }
 
-.stat p {
+.our-story p {
     font-size: 20px;
-    margin: 10px;
-    color: #000;
+    color: black;
+    font-weight: 500;
 }
 
-/* Stilizacija linija koje dele grid */
-.stats-container::before,
-.stats-container::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-}
-
-.stats-container::before {
-    width: 100%;
-    height: 1px;
-    top: 50%;
-}
-
-.stats-container::after {
-    width: 1px;
-    height: 100%;
-    left: 50%;
-}
-/* END WE GROW SECTION */
-
-
-
-
-
-/* START FOOTER */
-
-footer{
-    width: 100%;
-    height: 150px;
+/* FOOTER */
+footer.bg-orange {
     background-color: #EC5800;
+}
+footer a {
+    color: white;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: black;
 }
