@@ -18,6 +18,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 }
 .changing-word {
     color: #EC5800; /* Boja za animirani tekst */
