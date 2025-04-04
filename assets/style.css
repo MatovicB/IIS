@@ -20,6 +20,8 @@ nav{
     align-items: center;
     background-attachment: fixed;
 }
+
+
 .changing-word {
     color: #EC5800; /* Boja za animirani tekst */
     transition: opacity 0.5s ease-in-out;
@@ -48,6 +50,7 @@ nav{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: 200px;
   }
   
   .btnNovi:hover {
@@ -61,6 +64,43 @@ nav{
     transform: scale(0.95);
   }
 
+/* About Us Section */
+#about-us {
+    background-color: #fff;
+}
+
+#about-us h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+
+}
+
+
+  #about-us h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 5px;
+    background: linear-gradient(to right, #EC5800, #F09819);
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    border-radius: 5px;
+}
+
+/* Wave container */
+
+.wave-container {
+    position: relative;
+    background: #EC5800;
+    min-height: 30px; /* Smanjujemo početnu visinu */
+}
+
 
 
 /* Sekcija "We grow together" */
@@ -71,7 +111,7 @@ nav{
     text-align: center;
     position: relative;
     display: inline-block;
-
+    padding-bottom: 10px;
 
     opacity: 0;
     transform: scale(0.8);
@@ -94,8 +134,6 @@ nav{
     opacity: 1;
     transform: scale(1);
 }
-
-/* */
  
 
 .counter {
@@ -120,4 +158,21 @@ footer a {
 }
 footer a:hover {
     color: black;
+}
+
+
+
+/* Vidljivost naslova */ 
+
+/* Početno skrivanje naslova */
+.animated-title {
+    opacity: 0;
+    transform: translateY(30px); /* Blagi pomak nadole */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Kada se naslov vidi, postavi mu punu vidljivost */
+.animated-title.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

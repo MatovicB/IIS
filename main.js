@@ -54,21 +54,23 @@ observer.observe(statsSection);
 });
 
 
-/* */ 
+/* Title showing */ 
 
-document.addEventListener("DOMContentLoaded", function() {
-const title = document.querySelector(".our-story h2");
+document.addEventListener("DOMContentLoaded", function () {
+    const titles = document.querySelectorAll(".animated-title");
 
-function checkScroll() {
-let rect = title.getBoundingClientRect();
-if (rect.top < window.innerHeight * 0.75) {
-    title.classList.add("visible");
-}
-}
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Prestaje da prati nakon prvog prikazivanja
+            }
+        });
+    }, { threshold: 0.5 });
 
-window.addEventListener("scroll", checkScroll);
-checkScroll();
+    titles.forEach((title) => {
+        observer.observe(title);
+    });
 });
-
 
 /* */
