@@ -238,6 +238,66 @@ footer a:hover {
     color: black;
 }
 
+/* START About Us page */
+
+/* Timeline base */
+.timeline {
+    position: relative;
+    border-left: 3px solid #f47c00;
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+  .timeline-section {
+    min-height: 600px;
+    background-color: #EC5800;
+}
+
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    color: black;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(236,88,0,0.3);
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 30px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+  }
+  
+
+/* END About Us page */
+
+
 
 
 /* Vidljivost naslova */ 

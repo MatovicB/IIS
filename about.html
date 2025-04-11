@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -21,8 +23,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav d-flex align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
@@ -51,7 +53,7 @@
 <section id="about-us" class="py-5">
     <div class="container text-center">
         <!-- Naslov sa linijama sa strane -->
-        <h2 class="position-relative d-inline-block animated-title">About us</h2>
+        <h2 class="position-relative d-inline-block animated-title">Our Story</h2>
 
 
         <div class="row mt-4 justify-content-center">
@@ -66,11 +68,53 @@
                     It has survived not only five centuries, but also the leap into electronic typesetting, 
                     remaining essentially unchanged.
                 </p>
-                <a href="about.html" class="btn btnNovi mt-4">More about us</a>
             </div>
         </div>
     </div>
 </section>
+
+
+<!-- Timeline Section -->
+<section class="timeline-section py-5 text-white">
+    <div class="container">
+      <h2 class="position-relative d-inline-block animated-title text-center mb-5">Our Journey</h2>
+  
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon bg-orange"><i class="fa fa-flag"></i></div>
+          <div class="timeline-content glass-card">
+            <h4>2008</h4>
+            <p>Company founded with a vision to revolutionize material handling.</p>
+          </div>
+        </div>
+  
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-icon bg-orange"><i class="fa fa-rocket"></i></div>
+          <div class="timeline-content glass-card">
+            <h4>2013</h4>
+            <p>First national project completed, expanding reach across multiple states.</p>
+          </div>
+        </div>
+  
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-icon bg-orange"><i class="fa fa-cogs"></i></div>
+          <div class="timeline-content glass-card">
+            <h4>2020</h4>
+            <p>Implemented smart handling systems using the latest technologies.</p>
+          </div>
+        </div>
+  
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-icon bg-orange"><i class="fa fa-trophy"></i></div>
+          <div class="timeline-content glass-card">
+            <h4>2025</h4>
+            <p>Reached 230+ projects in 33 states. Still growing strong.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
  
 
@@ -101,54 +145,6 @@
         </div>
     </section>
 
-    <!-- Section Our Services -->
-
-    <section class="our-services py-5 text-center">
-        <div class="container">
-            <h2 class="position-relative d-inline-block animated-title">Our Services</h2>
-            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
-                <!-- Indikatori -->
-                <!-- <div class="carousel-indicators mt-5">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-                </div> -->
-    
-                <!-- Slike u Carouselu -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-image-wrapper">
-                            <img src="assets/img/test4.jpg" alt="Test 1" class="d-block w-100">
-                            <h3 class="h3Block text-white">Material Handling</h3>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image-wrapper">
-                            <img src="assets/img/test4.jpg" alt="Test 2" class="d-block w-100">
-                            <h3 class="h3Block text-white">Racking</h3>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image-wrapper">
-                            <img src="assets/img/test4.jpg" alt="Test 3" class="d-block w-100">
-                            <h3 class="h3Block text-white">Custom Solutions</h3>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Kontrole -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <a href="#" class="btn btnNovi mt-4">More Services</a>
-    </section>
     
 
     <!-- Footer -->
@@ -168,5 +164,13 @@
     <!-- Bootstrap JS + Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
 </body>
 </html>
